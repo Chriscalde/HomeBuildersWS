@@ -1,0 +1,21 @@
+.navmenu ul {
+    margin: auto;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .navmenu>ul {
+    display: flex;
+  }
+  
+  .navmenu>ul>li {
+    position: relative;
+    white-space: nowrap;
+    padding: 10px 0 10px;
+  }
+  
+  .navmenu a {
+    display: block;
+    position: relative;
+    transition: 0.3s;
+  }
