@@ -13,19 +13,27 @@ import logord from "../../assets/img/logord.png"
 import Link from "next/link";
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between bg-slate-100">
-      <div className="w-100 flex flex-row mx-auto">
-        <div className="flex flex-wrap m-auto p-5 list-none h-auto">
-            <ul className="gap gap-8 flex w-100 ">
-              <li className="text-zinc-800 hover:text-amber-600 font-bold mx-2"><Link href='/#about'>About</Link></li>
-              <li className="text-zinc-800 hover:text-amber-600 font-bold mx-2"><Link href='/#services'>Services</Link></li>
-              <li>Hello</li>
-            </ul>
-        </div>
-      </div>
+    <main className="flex min-h-screen flex-col items-center justify-between bg-zinc-100">
+      <div className="flex flex-wrap md:px-24 px-4 py-8 bg-zinc-100 w-full">
+                <div className="lg:mr-auto lg:ml-0 ml-auto mr-auto">
+                    <Link href="/" className="text-amber-500 md:text-3xl text-xl font-extrabold hover:scale-110">
+                        OneWay E&T <span className="text-zinc-600">Home Builders</span>
+                    </Link>
+                </div>
+                <div className="mx-auto md:mx-0">
+                    <div className={styles.navmenu}>
+                        <ul>
+                            <li className="text-amber-500 hover:text-zinc-800 lg:mx-4 mx-0"><Link href="/">Home</Link></li>
+                            <li className="text-amber-500 hover:text-zinc-800 lg:mx-4"><Link href="/#about">About</Link></li>
+                            <li className="text-amber-500 hover:text-zinc-800 lg:mx-4"><Link href="/#services">Services</Link></li>
+                            <li className="text-amber-500 hover:text-zinc-800 lg:mx-4"><Link href="/gallery">Gallery</Link></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
       <div className="w-full">
         <div className={styles.maindiv}>
-          <div className="py-6 my-auto items-center align-middle text-center">
+          <div className="md:py-6 my-auto items-center align-middle text-center">
             <h1 className="text-3xl text-amber-500 font-bold my-2">E&T Home Builders</h1>
             <h2 className="text-2xl text-zinc-100 my-2">Home Building & Remodeling, we work all around Utah. </h2>
             <div className="flex flex-row justify-center gap-2 font-bold mt-6">
@@ -35,9 +43,12 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col w-full justify-center items-center bg-zinc-300 p-5 text-zinc-800">
-        <h1 className="text-xl font-bold">Our Services</h1>
-        <div className="grid grid-cols-3 gap-x-10 gap-y-4">
+      <div className="flex flex-col text-center p-4 bg-gradient-to-b from-zinc-100 to-zinc-200 w-full">
+        <h1 className="text-zinc-700 text-xl font-bold">About <span className="text-amber-500">Us</span></h1>
+      </div>
+      <div className="flex flex-col w-full justify-center items-center bg-gradient-to-b from-zinc-200 to-zinc-300 p-5 text-zinc-600" id="services">
+        <h1 className="text-xl font-bold mb-4">Our Services</h1>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-4">
             <div>
               <Image src={frame} width={250} height={170} alt="framing"></Image>
               <h2 className="text-lg mt-2">Framing</h2>
