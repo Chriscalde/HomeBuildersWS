@@ -20,7 +20,7 @@ export default function Home() {
       <div className="flex flex-wrap md:px-24 px-4 py-8 bg-zinc-100 w-full">
                 <div className="lg:mr-auto lg:ml-0 ml-auto mr-auto">
                     <Link href="/" className="text-amber-500 md:text-3xl text-xl font-extrabold hover:scale-110">
-                        OneWay E&T <span className="text-zinc-600">Home Builders</span>
+                        OneWay E&T <span className="text-zinc-600">Home Builders LLC</span>
                     </Link>
                 </div>
                 <div className="mx-auto md:mx-0">
@@ -36,7 +36,7 @@ export default function Home() {
       <div className="w-full">
         <div className={styles.maindiv}>
           <div className="md:py-6 my-auto items-center align-middle text-center">
-            <h1 className="text-3xl text-amber-500 font-bold my-2">E&T Home Builders</h1>
+            <h1 className="text-3xl text-amber-500 font-bold my-2">E&T Home Builders LLC</h1>
             <h2 className="text-2xl text-zinc-100 my-2">Home Building & Remodeling, we work all around Utah. </h2>
             <div className="flex flex-row justify-center gap-2 font-bold mt-6">
               <a href="/#about" className="bg-transparent border-zinc-100 text-zinc-100 hover:bg-zinc-100 hover:text-zinc-800 border-2 p-2">Learn More</a>
@@ -102,7 +102,7 @@ export default function Home() {
       </div>
       <div className="md:grid md:grid-cols-2 gap-4 w-full p-4 bg-amber-500 text-zinc-800 text-lg" id="contact">
             <div className="flex flex-col p-6 items-center">
-                <h1 className="font-bold">OneWay E&T Home Builders</h1>
+                <h1 className="font-bold">OneWay E&T Home Builders LLC</h1>
                 <p>Contact</p>
                 <a href="tel:+14355545038">+1 (435) 554-5038</a>
                 <a href="tel:+14352298523">+1 (435) 229-8523</a>
@@ -114,7 +114,7 @@ export default function Home() {
         </div>
       <footer className="w-full bg-zinc-700 text-center text-zinc-100 md:flex md:flex-row justify-center items-center py-2">
         <a href="https://raptordevs.com" target="_blank" rel="noopener noreferrer" className="text-stone-100 mx-auto flex flex-grow justify-center items-center">
-          <span className="font-bold mr-2">OneWay E&T Home Builders</span>
+          <span className="font-bold mr-2">OneWay E&T Home Builders LLC</span>
           Powered by {' '}
           <span className=" ">
             <Image src={logord} alt="logo" width={80} height={60}></Image>
