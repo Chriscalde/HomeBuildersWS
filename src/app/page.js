@@ -13,6 +13,10 @@ import logord from "../../assets/img/logord.png"
 import proj1 from "../../assets/img/proj1.png"
 import proj2 from "../../assets/img/proj2.png"
 import proj3 from "../../assets/img/proj3.png"
+import proj4 from "../../assets/img/fr1.png"
+import proj5 from "../../assets/img/fr2.png"
+import proj6 from "../../assets/img/fr3.png"
+import proj7 from "../../assets/img/fr4.png"
 import Link from "next/link";
 export default function Home() {
   return (
@@ -94,10 +98,14 @@ export default function Home() {
       </div>
       <div className="flex flex-col bg-zinc-100" id="projects">
         <h1 className="text-2xl text-center mt-4 font-bold text-zinc-700">Projects</h1>
-        <div className="md:grid md:grid-cols-3 flex flex-col gap-8 p-10">
+        <div className=" flex flex-row gap-4 p-4 overflow-x-scroll overflow-auto overflow-y-hidden">
           <Image src={proj1} alt="Project1"></Image>
           <Image src={proj2} alt="Project2"></Image>
           <Image src={proj3} alt="Project3"></Image>
+          <Image src={proj4} alt="Project3"></Image>
+          <Image src={proj5} alt="Project3"></Image>
+          <Image src={proj6} alt="Project3"></Image>
+          <Image src={proj7} alt="Project3"></Image>
         </div>
       </div>
       <div className="md:grid md:grid-cols-2 gap-4 w-full p-4 bg-amber-500 text-zinc-800 text-lg" id="contact">
