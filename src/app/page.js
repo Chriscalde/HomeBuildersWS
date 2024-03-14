@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -17,8 +18,29 @@ import proj4 from "../../assets/img/fr1.png"
 import proj5 from "../../assets/img/fr2.png"
 import proj6 from "../../assets/img/fr3.png"
 import proj7 from "../../assets/img/fr4.png"
+import paint1 from "../../assets/img/paint1.png"
+import paint2 from "../../assets/img/paint2.png"
+import paint3 from "../../assets/img/paint3.png"
+import carp1 from "../../assets/img/carp1.png"
+import carp2 from "../../assets/img/carp2.png"
+import carp3 from "../../assets/img/carp3.png"
+import sheet1 from "../../assets/img/sheet1.png"
+import sheet2 from "../../assets/img/sr1.png"
+import sheet3 from "../../assets/img/sr3.png"
+import floor1 from "../../assets/img/floor1.png"
+import floor2 from "../../assets/img/floor22.png"
+import floor3 from "../../assets/img/floor3.png"
+import remodel1 from "../../assets/img/rem1.png"
+import remodel2 from "../../assets/img/rem2.png"
+import remodel3 from "../../assets/img/rem3.png"
+
+
 import Link from "next/link";
+import { useState } from "react";
+
+
 export default function Home() {
+  const [openService,setService] = useState('');
   return (
     <main className="flex min-h-screen flex-col items-center justify-between bg-zinc-100">
       <div className="flex flex-wrap md:px-24 px-4 py-8 bg-zinc-100 w-full">
@@ -69,43 +91,117 @@ export default function Home() {
       </div>
       <div className="flex flex-col w-full justify-center items-center bg-gradient-to-b from-zinc-200 to-zinc-300 p-5 text-zinc-600" id="services">
         <h1 className="text-xl font-bold mb-4">Our Services</h1>
+        {openService == "" && 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-4">
-            <div>
-              <Image src={frame} width={250} height={170} alt="framing"></Image>
-              <h2 className="text-lg mt-2">Framing</h2>
-            </div>
-            <div>
-              <Image src={paint} width={250} height={170} alt="painting"></Image>
-              <h2 className="text-lg mt-2">Painting</h2>
-            </div>
-            <div>
-              <Image src={carpentry} width={250} height={170} alt="carpentry"></Image>
-              <h2 className="text-lg mt-2">Carpentry</h2>
-            </div>
-            <div>
-              <Image src={sheet} width={250} height={170} alt="sheetrock"></Image>
-              <h2 className="text-lg mt-2">Sheetrock</h2>
-            </div>
-            <div>
-              <Image src={floor} width={250} height={170} alt="flooring"></Image>
-              <h2 className="text-lg mt-2">Flooring</h2>
-            </div>
-            <div>
-              <Image src={remodel} width={250} height={170} alt="remodeling"></Image>
-              <h2 className="text-lg mt-2">Remodeling</h2>
-            </div>
+        <div onClick={()=>setService("frame")}>
+          <Image src={frame} width={250} height={170} alt="framing" className="cursor-pointer" onClick={()=>setService('frame')}></Image>
+          <h2 className="text-lg mt-2">Framing</h2>
         </div>
+        <div>
+          <Image src={paint} width={250} height={170} alt="painting" className="cursor-pointer" onClick={()=>setService('paint')}></Image>
+          <h2 className="text-lg mt-2">Painting</h2>
+        </div>
+        <div>
+          <Image src={carpentry} width={250} height={170} alt="carpentry" className="cursor-pointer" onClick={()=>setService('carp')}></Image>
+          <h2 className="text-lg mt-2">Carpentry</h2>
+        </div>
+        <div>
+          <Image src={sheet} width={250} height={170} alt="sheetrock" className="cursor-pointer" onClick={()=>setService('sheet')}></Image>
+          <h2 className="text-lg mt-2">Sheetrock</h2>
+        </div>
+        <div>
+          <Image src={floor} width={250} height={170} alt="flooring" className="cursor-pointer" onClick={()=>setService('floor')}></Image>
+          <h2 className="text-lg mt-2">Flooring</h2>
+        </div>
+        <div>
+          <Image src={remodel} width={250} height={170} alt="remodeling" className="cursor-pointer" onClick={()=>setService('remodel')}></Image>
+          <h2 className="text-lg mt-2">Remodeling</h2>
+        </div>
+    </div>
+        }
+        {openService == "frame" && 
+        <div className="flex flex-col text-center">
+          <h1 className="text-xl textz">Framing</h1>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <Image alt="frame1" src={frame}></Image>
+            <Image alt="frame1" src={proj4}></Image>
+            <Image alt="frame1" src={proj5}></Image>
+            <Image alt="frame1" src={proj6}></Image>
+          </div>
+          <button className="p-2 mx-auto my-4 border-amber-500 text-amber-500 border-2" onClick={()=>setService("")}>Back</button>
+        </div>
+        }
+        {openService == "paint" && 
+        <div className="flex flex-col text-center">
+          <h1 className="text-xl textz">Painting</h1>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <Image alt="frame1" src={paint}></Image>
+            <Image alt="frame1" src={paint1}></Image>
+            <Image alt="frame1" src={paint2}></Image>
+            <Image alt="frame1" src={paint3}></Image>
+          </div>
+          <button className="p-2 mx-auto my-4 border-amber-500 text-amber-500 border-2" onClick={()=>setService("")}>Back</button>
+        </div>
+        }
+        {openService == "carp" && 
+        <div className="flex flex-col text-center">
+          <h1 className="text-xl textz">Carpentry</h1>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <Image alt="frame1" src={carpentry}></Image>
+            <Image alt="frame1" src={carp1}></Image>
+            <Image alt="frame1" src={carp2}></Image>
+            <Image alt="frame1" src={carp3}></Image>
+          </div>
+          <button className="p-2 mx-auto my-4 border-amber-500 text-amber-500 border-2" onClick={()=>setService("")}>Back</button>
+        </div>
+        }
+        {openService == "sheet" && 
+        <div className="flex flex-col text-center">
+          <h1 className="text-xl textz">Sheetrock</h1>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <Image alt="frame1" src={sheet}></Image>
+            <Image alt="frame1" src={sheet1}></Image>
+            <Image alt="frame1" src={sheet2}></Image>
+            <Image alt="frame1" src={sheet3}></Image>
+          </div>
+          <button className="p-2 mx-auto my-4 border-amber-500 text-amber-500 border-2" onClick={()=>setService("")}>Back</button>
+        </div>
+        }
+        {openService == "floor" && 
+        <div className="flex flex-col text-center">
+          <h1 className="text-xl textz">Flooring</h1>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <Image alt="frame1" src={floor}></Image>
+            <Image alt="frame1" src={floor1}></Image>
+            <Image alt="frame1" src={floor2}></Image>
+            <Image alt="frame1" src={floor3}></Image>
+          </div>
+          <button className="p-2 mx-auto my-4 border-amber-500 text-amber-500 border-2" onClick={()=>setService("")}>Back</button>
+        </div>
+        }
+        {openService == "remodel" && 
+        <div className="flex flex-col text-center">
+          <h1 className="text-xl textz">Remodeling</h1>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <Image alt="frame1" src={remodel}></Image>
+            <Image alt="frame1" src={remodel1}></Image>
+            <Image alt="frame1" src={remodel2}></Image>
+            <Image alt="frame1" src={remodel3}></Image>
+          </div>
+          <button className="p-2 mx-auto my-4 border-amber-500 text-amber-500 border-2" onClick={()=>setService("")}>Back</button>
+        </div>
+        }
       </div>
       <div className="flex flex-col bg-zinc-100" id="projects">
         <h1 className="text-2xl text-center mt-4 font-bold text-zinc-700">Projects</h1>
-        <div className=" flex flex-row gap-4 p-4 overflow-x-scroll overflow-auto overflow-y-hidden">
+        <div className="grid md:grid-cols-3 gap-4 p-10 overflow-x-scroll overflow-auto overflow-y-hidden">
           <Image src={proj1} alt="Project1"></Image>
           <Image src={proj2} alt="Project2"></Image>
           <Image src={proj3} alt="Project3"></Image>
-          <Image src={proj4} alt="Project3"></Image>
+          {/* <Image src={proj4} alt="Project3"></Image>
           <Image src={proj5} alt="Project3"></Image>
           <Image src={proj6} alt="Project3"></Image>
-          <Image src={proj7} alt="Project3"></Image>
+          <Image src={proj7} alt="Project3"></Image> */}
         </div>
       </div>
       <div className="md:grid md:grid-cols-2 gap-4 w-full p-4 bg-amber-500 text-zinc-800 text-lg" id="contact">
